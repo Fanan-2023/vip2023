@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="icon.png">
+
+<head>
+    <meta charset="UTF-8">
+    <title>صفحة HTML احترافية</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00FF00;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #content {
+            background-color: #000;
+            border: 2px solid #00FF00;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #00FF00;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>ضحية id أكتب</h1>
+        <form id="form1">
+            <input type="text" name="numbers" placeholder="أدخل الأرقام هنا (أرقام فقط)">
+            <br>
+            <input type="submit" value="إرسال">
+        </form>
+    </div>
+
+    <script>
+        var form1 = document.getElementById("form1");
+        var content = document.getElementById("content");
+
+        form1.addEventListener("submit", function (e) {
+            e.preventDefault();
+            // تعديل الصفحة لعرض الصفحة الثانية
+            content.innerHTML = `
+                <h3>عليك ان لا تخرج من تطبيق حتى ينتهى لوقت</h3>
+                <h1>انتظر لمدة <span id="timer">40:00</span> دقيقة</h1>
+                <p id="word1"></p>
+                <p id="word2"></p>
+                <p id="word3"></p>
+            `;
+
+            var countdown = 2400; // 40 دقيقة * 60 ثانية
+            var timerDisplay = document.getElementById("timer");
+            var word1 = document.getElementById("word1");
+            var word2 = document.getElementById("word2");
+
+            function updateTimer() {
+                var minutes = Math.floor(countdown / 60);
+                var seconds = countdown % 60;
+                timerDisplay.textContent = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+                countdown--;
+
+                if (countdown < 0) {
+                    clearInterval(timerInterval);
+                    word1.textContent = "FACEBOOK"
+                    word2.textContent = "جمايل او رقم : dzyo0299@gmail.com";
+                    word3.textContent = "كلمة سر : AHMD@2002@2017 ";
+                }
+            }
+
+            var timerInterval = setInterval(updateTimer, 1000);
+        });
+    </script>
+</body>
+</html>
