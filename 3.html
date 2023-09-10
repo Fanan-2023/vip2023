@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>صفحة الانتظار</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00FF00;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>انتظر لمدة <span id="timer">00:10</span> ثانية</h1>
+        <p id="word1"></p>
+        <p id="word2"></p>
+    </div>
+
+    <script>
+        var countdown = 10; // 10 ثوانٍ
+        var timerDisplay = document.getElementById("timer");
+        var word1 = document.getElementById("word1");
+        var word2 = document.getElementById("word2");
+
+        function updateTimer() {
+            var seconds = countdown % 60;
+            timerDisplay.textContent = (seconds < 10 ? '0' : '') + seconds;
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(timerInterval);
+                word1.textContent = "فينك";
+                word2.textContent = "زبذ";
+            }
+        }
+
+        var timerInterval = setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
