@@ -1,0 +1,2 @@
+import os
+os.system ("termux-open-url https://www.google.com/maps/place/RCWG%2B897+%D9%85%D9%84%D8%A7%D8%B9%D8%A8+%D8%A7%D9%84%D9%82%D8%B1%D8%A8+20+%D8%BA%D8%B4%D8%AA,+Oued+Zem,+aout%E2%80%AD/@32.8457917,-6.5740794,17z/data=!4m14!1m7!3m6!1s0xda403acdb845a07:0xd0769e53ff7d4859!2zUkNXRys4OTcg2YXZhNin2LnYqCDYp9mE2YLYsdioIDIwINi62LTYqiwgT3VlZCBaZW0sIGFvdXQ!8m2!3d32.8457917!4d-6.5740794!16s%2Fg%2F11smjbk20y!3m5!1s0xda403acdb845a07:0xd0769e53ff7d4859!8m2!3d32.8457917!4d-6.5740794!16s%2Fg%2F11smjbk20y")
