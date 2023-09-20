@@ -46,4 +46,4 @@ print("\033[91mYou have been permanently banned because you used more than 4 opp
 print("\033[91mYou have been permanently banned because you used more than 4 opportunities\033[0m")
 print("\033[91mYou have been permanently banned because you used more than 4 opportunities\033[0m")
 print("\033[91mYou have been permanently banned because you used more than 4 opportunities\033[0m")
-os.system ('figlet')
+os.system ('figlet BAND')
